@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+    <script src="gfg.js" defer></script>
+    <script src="DS.js" defer></script>
+    <script src="w3Resource.js" defer></script>
+
+    <style>
+      /* div {
+      min-width: 100px;
+      min-height: 100px;
+      padding: 30px;
+      border: 2px solid black;
+    } */
+   
+    </style>
+  </head>
+  <body>
+    <!-- <p>Helloo</p>
+     <div class="div1">
+       <div class="div2">
+         <div class="div3">
+           content
+         </div>
+       </div>
+     </div> -->
+    <!-- <iframe width="420" height="345" src="https://youtu.be/KP_A2ooJIYI?list=RDKP_A2ooJIYI">
+    </iframe> -->
+    <!-- <video width="320" height="240" controls>
+    <source src="./video/sample-mp4-file.mp4" >   
+    not supported</video> -->
+
+
+
+    <!-- <div< id = "str">hello</div> -->
+    <!-- <select id = "selectColor" onchange="setCookies()">
+        <option value="selectDefault">selectColor</option>
+        <option value="Red">Red</option>
+        <option value="green">Green</option>
+       <option value="yellow">Yellow</option>
+    </select>
+    <div id="wrapper"></div> -->
+
+    <!-- Event Bubbling -->
+
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- Event Delegation -->
+
+    <ul id="catageory">
+      <li id="laptop">Laptop</li>
+      <li id="shoes">Shoes</li>
+      <li id="bags">Bags</li>
+    </ul>
+
+    <!-- Event Delegation -->
+    <div id="form">
+  <input type="text" id="firstName" data-uppercase>
+  <input type="text" id="lastName">
+  <input type="text" id="mobile">
+</div>
+
+    <!-- ------------------------------------------------------------------------- -->
+
+    <!-- DEBOUNCING -->
+
+    <!-- <input type="text" onkeypress="getSuggestion()" /> -->
+
+    <!-- ------------------------------------------------------------------------- -->
+
+    <!-- Throttling -->
+
+    <!-- <button id="button">Click</button> -->
+
+    <!-- <input type="text" class="input-number">
+    <button class="add-number">Add</button>
+    <button class="display-number">Dispaly</button>
+    <div class="results"> -->
+
+    </div>
+  </body>
+  <script>
+    // Throttling
+    // const getData = () => {
+    //   console.log("clickeddd");
+    // };
+
+    // const throttle = (fn, d) => {
+    //   let flag = true;
+    //   return function () {
+    //     let context = this;
+    //     let args = arguments;
+    //     if (flag) {
+    //       fn.apply(context, args);
+    //       flag = false; // flag varible can be accessed due to closure
+    //       setTimeout(() => {
+    //         flag = true;
+    //       }, d);
+    //     }
+    //   };
+    // };
+
+    //  const getSuggestion = throttle(getData, 2000);
+    //  document.getElementById("button").addEventListener("click", getSuggestion); //try to run this on window resize
+
+    //-------------------------------------------------------------------------
+
+    // // DEBOUNCING
+    // function getData() {
+    //   //// API Call
+    //   console.log("clicked");
+    // }
+
+    // function debounce(fn, d) {
+    //   let timer; //why timer is outside:- because timer variable will be reintialized if declared inside function
+    //   return function () {
+    //     let context = this;  // context varible can be accessed due to closure
+    //     clearTimeout(timer);
+    //     timer = setTimeout(() => {
+    //       fn.apply(context);  //why apply
+    //     }, d);
+    //   };
+    // }
+    // const getSuggestion = debounce(getData, 300);
+
+    //-------------------------------------------------------------------------
+
+    //Event Delegation
+
+    document.querySelector('#catageory').addEventListener('click',(e) =>{
+      console.log(e.target.id);
+     // window.location.href = "/" + e.target.id;
+    })
+
+    document.querySelector('#form').addEventListener('keyup',(e) =>{
+      //console.log(e)
+      if(e.target.dataset.uppercase != undefined) {
+        console.log(e)
+        e.target.value = e.target.value.toUpperCase();
+      }
+    })
+    // ---------------------------------------------------------------------------------
+    // Event bubbling and Capturing
+
+    // document.getElementById('grandParent').addEventListener('click',(e) =>{
+    //  // e.stopPropagation();
+    //   console.log('grandParent clicked')
+    // },true)
+    // document.getElementById('parent').addEventListener('click',(e) =>{
+    //  e.stopPropagation();
+    //   console.log('parent clicked')
+    // },true)
+    // document.getElementById('child').addEventListener('click',(e) =>{
+    //   //e.stopPropagation();
+    //   console.log('child clicked')
+    // },true)
+
+    // let elements = document.getElementsByTagName('div');
+
+    // for(var i= 0;i<elements.length;i++) {
+    //   elements[i].onclick = function() {
+    //     console.log(this, 'this')
+    //   //  event.stopPropagation();
+    //     this.style.borderColor = 'red'
+    //     alert(this.getAttribute('id') + " color changed")
+    //   }
+    // }
+
+    // ---------------------------------------------------------------------------------
+
+    // window.onload = function() {
+    //     //debugger;
+    //     //localStorage.setItem('localStorage', 2);
+    //    // alert( localStorage.getItem('localStorage') );
+    // //    sessionStorage.setItem('sessionStorage', 1);
+    // //    alert( sessionStorage.getItem('sessionStorage') );
+    // if(document.cookie.length !==0) {
+    //    let cookieArray = document.cookie.split('=');
+    //    document.bgColor = cookieArray[1];
+    //    document.getElementById('selectColor').value = cookieArray[1];
+    // }
+    // }
+
+    //  function setCookies() {
+    //  let selectedColor = document.getElementById('selectColor').value;
+    //   if(selectedColor !== 'selectDefault') {
+    //     document.bgColor = selectedColor;
+    //     document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+    //     localStorage.setItem('localStorage', 20);
+    //     var local = localStorage.getItem('localStorage');
+    //   }
+    // }
+
+    //  document.getElementById("wrapper").innerHTML = local;
+    //
+  </script>
+</html>
