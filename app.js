@@ -1701,7 +1701,7 @@
 //myobj.getA()
 
 // Q
- //let arr = [1,2,3,4,5]
+//let arr = [1,2,3,4,5]
 // let sum =0;
 // for(let i of arr){
 //   sum = sum+i;
@@ -2012,7 +2012,6 @@
 
 //multiply(2)(3)(4)
 
-
 // using bind
 
 // function multiply(x,y){
@@ -2051,16 +2050,14 @@
 // a.push(...b,...c);
 // console.log(a);
 
-
-//With reduce 
+//With reduce
 // let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
 //     function(accumulator, currentValue) {
 //       return accumulator.concat(currentValue)
 //     },
 //     []
 //   )
-  // flattened is [0, 1, 2, 3, 4, 5]
-
+// flattened is [0, 1, 2, 3, 4, 5]
 
 //   Remove Duplicate using reduce
 
@@ -2082,11 +2079,10 @@
 //    arr3 = arr2.join(' ');
 //    return arr3
 //  }
- 
+
 //  console.log(rotation([1,2,3,4,5],2));
 
 //Q console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
-
 
 //Q var a={},
 // b={key:'b'},
@@ -2097,14 +2093,12 @@
 
 // console.log(a[b]);
 
-
 //Q
 // (function(x) {
 //   return (function(y) {
 //       console.log(y);
 //   })(2)
 // })(1);
-
 
 //Q
 // var hero = {
@@ -2119,7 +2113,7 @@
 // console.log(stoleSecretIdentity());
 // console.log(hero.getSecretIdentity());
 
-//Q
+//Q doubt here
 // var length = 10;
 // function fn() {
 // 	console.log(this.length);
@@ -2133,13 +2127,12 @@
 //   }
 // };
 
-// obj.method(fn, 1,3);
+//  obj.method(fn, 1,3);
 
 // var a = [1,2,3];
 // a = [0,...a]
 // a = [...a,4];
 // console.log(a);
-
 
 // var b = 1;
 // function outer(){
@@ -2153,8 +2146,9 @@
 // }
 // outer();
 
+ //'use strict';
 
-// 'use strict';
+// var id  = 20;  //doubt here
 // const user = {
 //   id: 551,
 //   name: 'Tom',
@@ -2173,18 +2167,13 @@
 // const getId = user.credentials.getId;
 // console.log(getId());
 
-
 // function fn() {
 //   let a = 20;
 // }
 // fn();
 // console.log(a);
 
-
-
-
 /////Interview
-
 
 // var person = {
 //   fname: "Sophia",
@@ -2208,8 +2197,7 @@
 //  let test = userName.bind(person,10);
 //  test(2,3);
 
-
-// let employee1 = { 
+// let employee1 = {
 //    name: 'mark',
 //   address:{
 //    'street':''
@@ -2219,7 +2207,7 @@
 //   }
 // }
 
-// let employee2 = { 
+// let employee2 = {
 //    name: 'ricky'
 // }
 
@@ -2231,7 +2219,6 @@
 
 // ["John", "Alex"].print();
 
-
 // Array.prototype.print = function(){
 //         let arr = this.array;
 //         for(let i of arr){
@@ -2241,7 +2228,7 @@
 //    let a = [1,2,3];
 //   a.print();
 // // "John", "Alex"
-  
+
 //     function Person(name,age) {
 //         this.name = name;
 //         this.age = age
@@ -2255,15 +2242,17 @@
 //           Person.call(this,name,age);
 //           this.last = last;
 //   }
-     
+
 //    Employee.protoype = Object.create(Person.protoype);
 
 //    Employee.getName();
 
 // function fn(){
 //   var a = 10;
-  
+
 // }
+// inteview end
+////////////////////////////////////////////////
 //Q
 // x = new Array();
 // y = new Array();
@@ -2276,11 +2265,11 @@
 
 // var fn;
 // for(var i=0;i<9;i++){
-  
+
 //    fn = function() {
 //      return i;
 //    }
-  
+
 // }
 
 // console.log(fn())
@@ -2289,7 +2278,6 @@
 // let a  = [];
 // console.log(typeof a);
 // console.log(Array.isArray(a));
-
 
 //Q
 // let emp1 = {
@@ -2303,7 +2291,6 @@
 // console.log(emp1)
 // console.log(emp2)
 
-
 // function urlSlug(str) {
 //   const splitArr = str.split(' ')
 //   if(splitArr.length > 1) {
@@ -2311,7 +2298,7 @@
 //       if(s !== '') {
 //         console.log(s)
 //         return s.toLowerCase()
-//       } 
+//       }
 //     }
 //     );
 
@@ -2319,11 +2306,10 @@
 //   } else {
 //        return splitArr[0];
 //   }
- 
+
 // }
 
 // console.log(urlSlug(' Global Title'))
-
 
 // function urlSlug(str) {
 //   const splitArr = str.split(' ')
@@ -2332,17 +2318,16 @@
 //     splitArr.forEach((s,i) =>{
 //       if(s !== '') {
 //         newArr.push(s.toLowerCase())
-//       } 
+//       }
 //     });
 //     return newArr.join('-');
 //   } else {
 //        return splitArr[0];
 //   }
- 
+
 // }
 
 //console.log(urlSlug('WinterIsBAck'))
-
 
 // function modeifieSring(str) {
 //   const splitArr = str.split(' ');
@@ -2360,10 +2345,9 @@
 //    }
 // }
 
-
 // console.log(modeifieSring(' Winter Is BAck'))
 
- //let arr = ['Hello','how','are','you'];
+//let arr = ['Hello','how','are','you'];
 
 // let arr1 = arr.map(el =>{
 //   if(el.length>3){
@@ -2382,20 +2366,6 @@
 
 //  console.log(arr2)
 
-// function filterArray(arr) {
-//   return arr.filter((el => {
-//     if(el>0 && el %1 === 0) {
-//       return el
-//     }
-//   })).map(ele => {
-//     return ele*ele;
-//   })
-// }
-
-// function filterArray(arr) {
-//   return arr.filter(el => (el>0 &&el%1===0)).map(el => el*el)
-// }
-//console.log(filterArray([2.9, -3, 4, 9,1.5]))
 
 // Polyfill for bind
 
@@ -2410,7 +2380,7 @@
 
 // fullName.call(obj));
 
-
+//Q difference between map anf filter
 // let arr = ['Hello','how','are','you'];
 
 // let arr1 = arr.map(el =>{
@@ -2444,15 +2414,10 @@
 // }
 //console.log(filterArray([2.9, -3, 4, 9,1.5]))
 
-
-
-
-
 // let a = [];
 
 // // a.splice(1,1,20);
 // // a.splice(2,1,30);
-
 
 // function insert(index,element) {
 //   a[index] = element
@@ -2465,3 +2430,89 @@
 // insert(4,30);
 // insert(1,50);
 
+//22nd Aug
+//Q
+// var title = ['hello','world'];
+// title[0] = 'c'   // here we are changing an array. Arrays are mutable
+// title[1][0]= 'd'; //here we are trying to change the string but strings are immutable
+// console.log(title)
+
+// //Q
+// let myStr = 'javascript'
+// myStr[0] = 'Q';
+// console.log(myStr) //Because strings are immutable
+
+// //Q
+// let re = [12]+[12]
+// console.log(re)
+
+// //Q
+// let arr = [];
+// let str = 'hello';
+// let result = [] + [] + str.split('');
+// console.log(result)
+
+//Q function expression and declration
+ //fn();
+
+// function fn() {
+//     console.log(30);
+// }
+
+// var fn = function() {
+//     console.log(10);
+// }
+
+// function fn() {
+//     console.log(20);
+// }
+
+//  fn();
+
+//1
+//var a  = 0;
+// console.log(a++);
+// console.log(++a);
+// console.log(a);
+
+//Q
+//  function first(){
+//      var a = 100;
+//      {
+//         let a = 200
+//      }
+//      console.log(a);
+//  }
+
+//  function second() {
+//      {
+//          var b = 100;
+//          let b = 200
+//      }
+//      console.log(b);
+//  }
+
+ // first();
+// second();
+
+//Q
+
+// var name = 'LCO';
+
+// function fn() {
+//     if(![]){
+//      var name = 'mark'   //here in compile step name is set to undefined 
+//     }
+//    console.log('hello ' + name)
+// }
+// fn()
+
+//Q
+
+// function foo() {
+//      this.name = 'user name'
+// }
+
+// foo.name = 'hello' //here name is read only property
+
+// console.log(foo.name);

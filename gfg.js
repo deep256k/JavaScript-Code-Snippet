@@ -589,7 +589,7 @@
 
 
 
-//  // note does't not store duplicate if key and values are same
+//  // note object does't not store duplicate if key and values are same
 // let myObj = {
 //     a:1,
 //     b:2,
@@ -673,28 +673,28 @@
 //     }
 //   };
 
-// const deepCopyFunction = (inObject) => {
-//     let outObject, value
-//      //console.log('input',inObject)
-//     if (typeof inObject !== "object" || inObject === null) {
-//       return inObject // Return the value if inObject is not an object
-//     }
+const deepCopyFunction = (inObject) => {
+    let outObject, value
+     //console.log('input',inObject)
+    if (typeof inObject !== "object" || inObject === null) {
+      return inObject // Return the value if inObject is not an object
+    }
   
-//     // Create an array or object to hold the values
-//     outObject = Array.isArray(inObject) ? [] : {}
+    // Create an array or object to hold the values
+    outObject = Array.isArray(inObject) ? [] : {}
   
-//     for (key in inObject) {
-//       value = inObject[key]
-//      // console.log('val',key ,value)
+    for (key in inObject) {
+      value = inObject[key]
+     // console.log('val',key ,value)
   
-//       // Recursively (deep) copy for nested objects, including arrays
-//       outObject[key] = deepCopyFunction(value);
-//     //  console.log('res',outObject)
+      // Recursively (deep) copy for nested objects, including arrays
+      outObject[key] = deepCopyFunction(value);
+    //  console.log('res',outObject)
 
-//     }
-//      //console.log('final',outObject)
-//     return outObject
-//   }
+    }
+     //console.log('final',outObject)
+    return outObject
+  }
 
 //    console.log(deepCopyFunction(user1));
 
