@@ -1714,7 +1714,7 @@
 //Q
 
 // function fun(a,b){
-// if(a,b){
+// if(a&&b){
 //   return a+b
 // }
 // else{
@@ -1962,9 +1962,9 @@
 // let seq1 = seq();
 // let seq2 = seq();
 
-// alert( seq1() ); // line 1
-// alert( seq1() ); // line 2
-// alert( seq2() ); // line 3
+// console.log( seq1() ); // line 1 
+// console.log( seq1() ); // line 2  
+// console.log( seq2() ); // line 3  
 
 // const array = [16, 32, 64, 128];
 // for (var i = 0; i < array.length; i++) {
@@ -2042,9 +2042,9 @@
 // let a = [1,2,3];
 // let b = [3,4,5];
 // let c = [5,7];
-// a.push(...b); //Differenence between concat and pudh
+// a.push(...b); //Differenence between concat and push
 // let d = a.concat(b);
-// console.log(a);
+// console.log(a); conact doest not cahnge original array
 // console.log(d);
 
 // a.push(...b,...c);
@@ -2057,6 +2057,8 @@
 //     },
 //     []
 //   )
+
+//   console.log(flattened)
 // flattened is [0, 1, 2, 3, 4, 5]
 
 //   Remove Duplicate using reduce

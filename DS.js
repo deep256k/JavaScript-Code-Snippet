@@ -1,3 +1,4 @@
+( function() {
 // interview question
 // 1. convert nested Object
 // 2. check type is JSON
@@ -244,3 +245,4 @@
 
 //   this.payBeneficiaryService.setPreFilledvalue(true);
 
+})();

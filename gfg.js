@@ -30,17 +30,6 @@
 // });
 // console.log(sortedArray[sortedArray.length-2]);
 
-// for(let i=0;i<myArr.length;i++){
-//     if(myArr[i]>myArr[i+1]){
-//         let temp = 0
-//         temp = myArr[i+1];
-//         myArr[i+1] = myArr[i];
-//         myArr[i] = temp;
-//     }else{
-
-//     }
-// }
-// console.log(myArr)
 
 //4. Display the largest name;
 // let strArray = ['Ricky','Markkk','Steve','Ole',];
@@ -207,7 +196,7 @@
 //1 without build in
 
  //let myArr = [1, 2, 3, 4, 5, 6, 7];
-// let a = 20;
+//let a = 20;
 
 // function leftRotateByOne(arr) {
 //   let temp = arr[0];
@@ -580,7 +569,7 @@
 // let arr1 = [5,5,6,4,6,7,7,8,1,1]
 // let arr2 = ['a','b','c','a','c']
 // let obj = {};
-// for(let i of arr2){   
+// for(let i of arr1){   
 //     //obj[i] = true; this does not work in number
 //     obj[i] = i;
 // }
@@ -673,28 +662,28 @@
 //     }
 //   };
 
-const deepCopyFunction = (inObject) => {
-    let outObject, value
-     //console.log('input',inObject)
-    if (typeof inObject !== "object" || inObject === null) {
-      return inObject // Return the value if inObject is not an object
-    }
+// const deepCopyFunction = (inObject) => {
+//     let outObject, value
+//      //console.log('input',inObject)
+//     if (typeof inObject !== "object" || inObject === null) {
+//       return inObject // Return the value if inObject is not an object
+//     }
   
-    // Create an array or object to hold the values
-    outObject = Array.isArray(inObject) ? [] : {}
+//     // Create an array or object to hold the values
+//     outObject = Array.isArray(inObject) ? [] : {}
   
-    for (key in inObject) {
-      value = inObject[key]
-     // console.log('val',key ,value)
+//     for (key in inObject) {
+//       value = inObject[key]
+//      // console.log('val',key ,value)
   
-      // Recursively (deep) copy for nested objects, including arrays
-      outObject[key] = deepCopyFunction(value);
-    //  console.log('res',outObject)
+//       // Recursively (deep) copy for nested objects, including arrays
+//       outObject[key] = deepCopyFunction(value);
+//     //  console.log('res',outObject)
 
-    }
-     //console.log('final',outObject)
-    return outObject
-  }
+//     }
+//      //console.log('final',outObject)
+//     return outObject
+//   }
 
 //    console.log(deepCopyFunction(user1));
 
@@ -709,3 +698,122 @@ const deepCopyFunction = (inObject) => {
 //   deepArray[4][0][0] = 10;
 //   console.log(deepArray)
 //   console.log(cloneobj);
+
+// let carData = [
+//   {
+//     carNo: 'KA-64-YX-0619',
+//     color: 'Red',
+//     slot: 1,
+//     date:'Sep 10, 2019, 2:32:10 PM',
+//   },
+//   {
+//     carNo: 'KA-64-YX-1659',
+//     color: 'White',
+//     slot: 7,
+//     date: 'Sep 16, 2019, 2:32:10 PM',
+//   },
+//   {
+//     carNo: 'KA-64-YX-2615',
+//     color: 'Blue',
+//     slot: 2,
+//     date: 'Sep 22, 2019, 2:32:10 PM',
+//   },
+//   {
+//     carNo: 'KA-64-YX-6619',
+//     color: 'Black',
+//     slot: 3,
+//     date: 'Sep 18, 2019, 2:32:10 PM',
+//   },
+//   {
+//     carNo: 'KA-64-YX-8614',
+//     color: 'Red',
+//     slot: 10,
+//     date: 'Sep 13, 2020, 2:32:10 PM',
+//   },
+// ];
+// let slot = [2,6,8,1];
+
+
+// console.log([...carData])
+ //console.log(carData)
+
+// sortedData = [...carData].sort((a,b)=>{
+//     if(a['slot']>b['slot']) return 1;
+//     else if(a['slot']<b['slot']) return -1;
+//     return 0
+// })
+// console.log(sortedData);
+// console.log(carData);
+
+// function insert(carData){
+//   let sortedSlot = carData.map(el => el.slot);
+//   sortedSlot.sort((a,b)=>{
+//     return a-b;
+//   });
+//   console.log(sortedSlot)
+//   for(var i =0 ;i<sortedSlot.length;i++){
+//     if(sortedSlot[i] !== i+1){
+//        sortedSlot.push(i+1);
+//        break;
+//     }
+//   }
+//   return i+1;
+// }
+
+// console.log(insert(carData));
+
+// function totalVowels(string){
+//   let total = 0
+//   let vowels = {'a':'value', 'e':'value', 'i':'value', 'o':'value',  'u':'value'}
+//   for(let i=0; i < string.length; i++){
+//      if( vowels[string[i]] ){
+//      total += 1
+//       }
+//    }
+// return total
+// }
+
+// console.log(totalVowels('hello world'));
+
+
+  // class Animal {
+  //   constructor(color,legs,type){
+  //     this.color = color;
+  //     this.legs = legs;
+  //     this.type = type
+  //   }
+  //  speak(){
+  //    console.log('speaking')
+  //  }
+  // }
+
+  // class Dog extends Animal{
+  //   constructor(color,legs,type,){
+  //    super(color,legs,type)
+  //   }
+  //   bark(){
+  //     console.log('barking');
+  //     this.speak()
+  //   }
+  // }
+  // let dog1 = new Dog();
+  // //dog1.speak()
+  // dog1.bark();
+
+
+ function Animal(){
+
+ }
+
+ Animal.prototype.speak = function(){
+   console.log('speaking');
+ }
+
+ function Dog(){
+   Animal.call(this);
+ }
+
+
+
+
+ 
